@@ -30,7 +30,6 @@ public class PickCategory extends Task {
         JPanel panel = new JPanel();
         panel.setBorder(BorderFactory.createLineBorder(Color.BLACK));
         panel.setPreferredSize(new Dimension(400,300));
-        //panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
         for (Categories category: Categories.values()) {
             JButton button = new JButton(category.name);
             button.addActionListener(x -> recieveAnswer(category));

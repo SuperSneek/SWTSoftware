@@ -48,7 +48,7 @@ public enum DesignPatterns {
         URL url = ClassLoader.getSystemResource("EntwurfsMuster/" + name + ".PNG");
         try {
             BufferedImage img = ImageIO.read(url);
-            img = resize(img, img.getWidth()/3,img.getHeight()/3);
+            img = resize(img, img.getWidth()/2,img.getHeight()/2);
             image = new ImageIcon(img);
         } catch (IOException ignored) {
         }

@@ -33,7 +33,7 @@ public class PickCorrectPattern extends JFrame {
                 task.patternPicked(false);
                 dispose();
             });
-            if(rand.nextInt() == 1) {
+            if(Math.random() < 0.5) {
                 patternsToAdd.addFirst(randButton);
             } else {
                 patternsToAdd.addLast(randButton);

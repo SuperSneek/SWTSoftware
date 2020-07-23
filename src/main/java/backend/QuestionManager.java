@@ -39,18 +39,19 @@ public class QuestionManager {
         } else {
             index = random.nextInt(patternsToAnswer.size() - 1);
         }
-        errors++;
         DesignPatterns pattern = patternsToAnswer.get(index);
         return new PickCategory(pattern, this);
     }
 
     public void removePattern(DesignPatterns p) {
         main.newCorrectAnswer(p);
-        errors--;
         patternsToAnswer.remove(p);
     }
 
     public void taskAnswered(boolean correctAnswer) {
+        if(!correctAnswer) {
+            errors++;
+        }
         main.askNewQuestion(nextQuestion());
     }
 

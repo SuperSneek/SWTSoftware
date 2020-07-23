@@ -8,5 +8,29 @@
     <artifactId>SWTLearnerMaver</artifactId>
     <version>0.0.1-SNAPSHOT</version>
 
+        <properties>
+            <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+            <maven.compiler.source>14</maven.compiler.source>
+            <maven.compiler.target>14</maven.compiler.target>
+        </properties>
+    <build>
+    <plugins>
+    <plugin>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-jar-plugin</artifactId>
+        <version>3.2.0</version>
+    <configuration>
+        <archive>
+            <manifest>
+                <classpathPrefix>lib/</classpathPrefix>
+                <addClasspath>true</addClasspath>
+                <mainClass>frontend.MainInterface</mainClass>
+            </manifest>
+        </archive>
+    </configuration>
+    </plugin>
+    </plugins>
+    </build>
+
 
 </project>

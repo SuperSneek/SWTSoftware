@@ -7,6 +7,7 @@ import frontend.questions.Task;
 import javax.swing.*;
 import javax.swing.border.LineBorder;
 import java.awt.*;
+import java.net.URL;
 
 public class MainInterface {
 
