@@ -41,9 +41,19 @@ public class PickCategory extends Task {
 
     public void recieveAnswer(Categories category) {
         if(category == pattern.category) {
-            mng.removePattern(pattern);
+            new PickCorrectPattern(pattern, this);
+        } else {
+            answer(false);
         }
-        answer(category == pattern.category);
+    }
+
+    public void patternPicked(boolean correct) {
+        if(!correct) {
+            answer(false);
+            return;
+        }
+        mng.removePattern(pattern);
+        answer(true);
     }
 
 }
